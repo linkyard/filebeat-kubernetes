@@ -8,7 +8,7 @@ filebeat.prospectors:
   json.message_key: log
   json.keys_under_root: true
   json.add_error_key: true
-  multiline.pattern: '^\s'
+  multiline.pattern: '(^\s)|(^Caused by)'
   multiline.match: after
   document_type: kube-logs
 
